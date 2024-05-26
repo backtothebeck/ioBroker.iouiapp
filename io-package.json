@@ -1,0 +1,114 @@
+{
+    "common": {
+        "name": "iouiapp",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "io UI App",
+        "titleLang": {
+            "en": "io UI App",
+            "de": "io UI-App",
+            "ru": "io-приложение с пользовательским интерфейсом",
+            "pt": "Aplicativo de IU io",
+            "nl": "io UI-app",
+            "fr": "Application d'interface utilisateur io",
+            "it": "ioApp dell'interfaccia utente",
+            "es": "Aplicación io UI",
+            "pl": "Aplikacja interfejsu użytkownika io",
+            "zh-cn": "io用户界面应用程序"
+        },
+        "desc": {
+            "en": "The Adapter for the io UI App",
+            "de": "Der Adapter für die io UI App",
+            "ru": "Адаптер для приложения io UI",
+            "pt": "O adaptador para o aplicativo io UI",
+            "nl": "De adapter voor de io UI-app",
+            "fr": "L'adaptateur pour l'application io UI",
+            "it": "L'adattatore per l'app io UI",
+            "es": "El adaptador para la aplicación io UI",
+            "pl": "Adapter do aplikacji io UI",
+            "zh-cn": "io UI 应用程序的适配器"
+        },
+        "authors": [
+            "backtothebeck <info@benjaminbeck.net>"
+        ],
+        "keywords": [
+            "test"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "iouiapp.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/backtothebeck/ioBroker.iouiapp/master/admin/iouiapp.png",
+        "readme": "https://github.com/backtothebeck/ioBroker.iouiapp/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "visualization",
+        "compact": true,
+        "materialize": true,
+        "materializeTab": true,
+        "adminTab": {
+            "singleton": true,
+            "name": {
+                "en": "io UI App",
+                "de": "io UI-App",
+                "ru": "io-приложение с пользовательским интерфейсом",
+                "pt": "Aplicativo de IU io",
+                "nl": "io UI-app",
+                "fr": "Application d'interface utilisateur io",
+                "it": "ioApp dell'interfaccia utente",
+                "es": "Aplicación io UI",
+                "pl": "Aplikacja interfejsu użytkownika io",
+                "zh-cn": "io用户界面应用程序"
+            },
+            "link": "",
+            "fa-icon": "info"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}

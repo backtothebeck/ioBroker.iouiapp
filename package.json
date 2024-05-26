@@ -1,0 +1,65 @@
+{
+  "name": "iobroker.iouiapp",
+  "version": "0.0.1",
+  "description": "The Adapter for the io UI App",
+  "author": {
+    "name": "backtothebeck",
+    "email": "info@benjaminbeck.net"
+  },
+  "homepage": "https://github.com/backtothebeck/ioBroker.iouiapp",
+  "license": "MIT",
+  "keywords": [
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/backtothebeck/ioBroker.iouiapp"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.1.4"
+  },
+  "devDependencies": {
+    "@iobroker/testing": "^4.1.3",
+    "@types/chai": "^4.3.16",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/gulp": "^4.0.17",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^14.18.63",
+    "@types/proxyquire": "^1.3.31",
+    "@types/sinon": "^17.0.3",
+    "@types/sinon-chai": "^3.2.12",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "axios": "^1.7.2",
+    "chai": "^5.1.1",
+    "chai-as-promised": "^7.1.2",
+    "eslint": "^9.3.0",
+    "gulp": "^5.0.0",
+    "mocha": "^10.4.0",
+    "proxyquire": "^2.1.3",
+    "rimraf": "^5.0.7",
+    "sinon": "^18.0.0",
+    "sinon-chai": "^3.7.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "main": "build/main.js",
+  "scripts": {
+    "prebuild": "rimraf ./build",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "build": "npm run build:ts",
+    "watch:ts": "tsc -p tsconfig.build.json --watch",
+    "watch": "npm run watch:ts",
+    "test:ts": "mocha src/**/*.test.ts",
+    "test:package": "mocha test/package --exit",
+    "test:unit": "mocha test/unit --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:ts && npm run test:package",
+    "lint": "eslint --ext .ts src"
+  },
+  "bugs": {
+    "url": "https://github.com/backtothebeck/ioBroker.iouiapp/issues"
+  },
+  "readmeFilename": "README.md"
+}
